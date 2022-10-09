@@ -5,22 +5,22 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 20px;
+}
+
 :root {
-  /* --color-prim: #32ac87; */
-  --color-prim: #3fd2c7;
-  /* --color-sec: #529ec29f; */
-  --color-sec: #99ddff;
-  --color-bg-prim: #ffffff;
-  --color-bg-sec: #cef7f7;
-  --font-color: #00458b;
-  --seperator-width: 2px;
+  --color-prim: #ffce29;
+  --color-sec: #252525;
+  --color-border: #dddddd;
+  --font-color: #000000;
 }
 
 body {
   font-family: sans-serif;
   color: var(--font-color);
   line-height: 4rem;
-  background-image: linear-gradient(var(--color-bg-prim) 0%, var(--color-bg-sec) 100%);
+  background-image: white;
   /* background-image: radial-gradient(
     farthest-corner at top 6em left 6em,
     var(--color-bg-prim) 0%,
@@ -29,8 +29,12 @@ body {
 }
 
 .container {
+  width: 100%;
   display: flex;
-  border: 2em solid var(--color-sec);
+  /* flex-wrap: nowrap; */
+  border: 2em solid var(--color-border);
+  overflow-wrap: break-word;
+  font-family: Bahnschrift, Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -45,7 +49,7 @@ header {
   display: flex;
   flex: 1;
   flex-direction: column;
-  width: 13em;
+  width: 15em;
   height: 100%;
 }
 
@@ -55,6 +59,7 @@ header {
 }
 
 .nav-links {
+  font-family: Bahnschrift SemiBold, sans-serif;
   flex: inherit;
   list-style-type: none;
   display: flex;
@@ -62,18 +67,27 @@ header {
   justify-items: center;
 }
 
+.name-box {
+  text-align: center;
+  border: 2px solid var(--color-sec);
+  border-bottom: none;
+  background-color: var(--color-sec);
+  color: white;
+}
+
 .nav-item {
   flex: inherit;
   font-size: 1.2em;
-  border: 4px solid rgb(141, 141, 141);
+  border: 2px solid var(--color-border);
   border-bottom: none;
 }
 
 .nav-item a {
   flex: inherit;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding: 20px 50px;
   width: 100%;
   height: 100%;
   /* z-index: 1;
@@ -96,24 +110,24 @@ header {
   opacity: 1;
 }
 
-.nav-item a:active {
-}
-
 .nav-item:last-child {
   border-bottom: 4px solid rgb(141, 141, 141);
 }
 
 .nav-item--selected {
-  background-color: red;
+  background-color: var(--color-prim);
+  border-radius: 0;
 }
 
 main {
-  flex: 0 0 20px;
+  width: auto;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: 5em;
-  margin-left: 2em;
+  /* margin-left: 2em; */
   padding-bottom: 6em;
+  padding: 6em 4em;
 }
 
 h3 {
@@ -126,29 +140,39 @@ li {
   font-size: 1.5em;
 }
 
-.name-container {
+.name {
   display: block;
   text-align: center;
-  padding: 5em 0;
+  padding: 1.5em 0;
+  font-size: 7rem;
+  font-weight: normal;
 }
 
-.name {
-  font-size: 7rem;
+.section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 3em;
+  margin-bottom: 9em;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  padding-right: 0.5em;
+}
+
+.title-style {
+  width: 2.5em;
+  height: 1em;
+  margin-bottom: 1em;
+  background-color: var(--color-prim);
 }
 
 .section-title {
-  font-size: 3.5em;
-  margin-top: 0.5em;
-  margin-bottom: 2em;
-  padding-top: 2em;
-  padding-bottom: 0.5em;
-  padding-right: 0.5em;
-  grid-column: 1;
-
-  border-bottom: 4px solid var(--color-prim);
+  font-size: 3em;
 
   justify-self: end;
-  text-align: right;
+  text-align: center;
 }
 
 .personal-info {
@@ -168,44 +192,71 @@ li {
   font-size: 3em;
 }
 
-.personal-info-box {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.personal-info-box .attribute-key {
-  text-align: right;
-}
-
-.personal-info-box .attribute-value {
-  text-align: left;
-}
-
-[class|="vertical-seperator"] {
-  width: var(--seperator-width);
+.vertical-seperator {
+  width: 2px;
   margin: 0 60px;
   background-color: rgb(206, 206, 206);
+  justify-self: center;
+  grid-column: 2;
+  margin: 0 0;
 }
 
 .section-content {
-  padding-left: 5em;
-  width: 80vw;
-  /* font-size: 1.8rem; */
-  grid-column: 1 / -1;
+  padding: 0 5em;
+  /* width: 80vw; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 120px 2fr;
+  grid-template-rows: auto;
   align-content: stretch;
   align-items: stretch;
   justify-content: start;
   row-gap: 2rem;
 }
 
+.personal-info-box {
+  row-gap: 0;
+}
+
+.section-content h3,
+h4 {
+  text-align: end;
+}
+
+.section-content p {
+  text-align: start;
+}
+
 .section-content li {
-  margin-left: 2em;
+  margin-left: 1em;
+}
+
+/* This monstrosity is caused by my attempt to implement a seperator using CSS grid
+   instead of Flexbox. Lesson learned, won't do it again. Still stupid that it doesn't
+   work the way I expected it to do. */
+
+.personal-info .section-content .vertical-seperator {
+  grid-row: span 5;
+}
+
+.work-experience .section-content .vertical-seperator {
+  grid-row: span 2;
+}
+
+.education .section-content .vertical-seperator {
+  grid-row: span 2;
+}
+
+.software-skills .section-content .vertical-seperator {
+  grid-row: span 2;
+}
+
+.misc-skills .section-content .vertical-seperator {
+  grid-row: span 1;
 }
 
 footer {
+  flex-shrink: 1;
+  /* flex-grow: 0; */
   position: sticky;
   top: 0;
 }

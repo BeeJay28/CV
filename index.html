@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
-    <title>Portfolio Website</title>
+    <title>CV</title>
     <script type="module" src="script.js"></script>
   </head>
   <body>
     <div class="container">
       <header>
         <nav class="nav">
-          <img class="face-img" src="img/face.jpg" />
+          <img class="face-img" src="img/exm.jpg" />
+          <p class="name-box">Artur Herdt</p>
           <ul class="nav-links">
             <li class="nav-item nav-item--selected" data-section="1">
               <a href="#section--1">Persönliche Daten</a>
@@ -25,32 +26,35 @@
         </nav>
       </header>
       <main>
-        <div class="name-container">
-          <h1 class="name">Artur Herdt</h1>
-        </div>
-        <section class="personal-info">
-          <h2 class="section-title" id="section--1">Persönliche Daten</h2>
-          <div class="personal-info-box">
-            <div class="attribute-key">
-              <h3>Anschrift:</h3>
-              <h3>Geburtsdatum und -ort:</h3>
-              <h3>Telefon:</h3>
-              <h3>E-Mail:</h3>
-            </div>
+        <h1 class="name">Artur Herdt</h1>
+        <section class="personal-info" id="section--1">
+          <div class="section-header">
+            <div class="title-style"></div>
+            <h2 class="section-title">Persönliche Daten</h2>
+          </div>
+          <div class="section-content personal-info-box">
+            <h3>Anschrift:</h3>
             <div class="vertical-seperator"></div>
-            <div class="attribute-value">
-              <p>Karl-Küffler Str. 25, 41542 Dormagen</p>
-              <p>28.01.1999 in Stawropol/Russland</p>
-              <p>+49 157 31586304</p>
-              <p>herdt.artur28@yahoo.com</p>
-            </div>
+            <p>Karl-Küffler Str. 25, 41542 Dormagen</p>
+            <h3>Geburtsdatum:</h3>
+            <p>28.01.1999</p>
+            <h3>Geburtsort:</h3>
+            <p>Stawropol/Russland</p>
+            <h3>Telefon:</h3>
+            <p>+49 157 31586304</p>
+            <h3>E-Mail:</h3>
+            <p>herdt.artur28@yahoo.com</p>
           </div>
         </section>
 
-        <section class="work-experience">
-          <h2 class="section-title" id="section--2">Berufserfahrung</h2>
+        <section class="work-experience" id="section--2">
+          <div class="section-header">
+            <div class="title-style"></div>
+            <h2 class="section-title">Berufserfahrung</h2>
+          </div>
           <div class="section-content">
             <h4>seit 04/2021</h4>
+            <div class="vertical-seperator"></div>
             <div class="work-description">
               <p>Werkstudent als Elektroniker für Energie- und Gebäudetechnik</p>
               <p>Schoenen GmbH & Co. KG (Dormagen, NRW)</p>
@@ -72,10 +76,14 @@
           </div>
         </section>
 
-        <section class="education">
-          <h2 class="section-title" id="section--3">Bildungsweg</h2>
+        <section class="education" id="section--3">
+          <div class="section-header">
+            <div class="title-style"></div>
+            <h2 class="section-title">Bildungsweg</h2>
+          </div>
           <div class="section-content">
             <h4>seit 04/2021</h4>
+            <div class="vertical-seperator"></div>
             <div class="place-of-study">
               <p>Informatik Bachelor Studium</p>
               <p>Heinrich-Heine-Universität (Düsseldorf, NRW)</p>
@@ -95,10 +103,14 @@
           </div>
         </section>
 
-        <section class="software-skills">
-          <h2 class="section-title" id="section--4">Software-Kenntnisse</h2>
+        <section class="software-skills" id="section--4">
+          <div class="section-header">
+            <div class="title-style"></div>
+            <h2 class="section-title">Software-Kenntnisse</h2>
+          </div>
           <div class="section-content">
             <h3>Programmiersprachen:</h3>
+            <div class="vertical-seperator"></div>
             <div class="programming-langs">
               <p>Java - Gute Kenntnisse</p>
               <p>C - Gute Kenntnisse</p>
@@ -117,10 +129,14 @@
           </div>
         </section>
 
-        <section class="misc-skills">
-          <h2 class="section-title" id="section--5">Sonstige Kenntnisse</h2>
+        <section class="misc-skills" id="section--5">
+          <div class="section-header">
+            <div class="title-style"></div>
+            <h2 class="section-title">Sonstige Kenntnisse</h2>
+          </div>
           <div class="section-content">
             <h3>Sprachen:</h3>
+            <div class="vertical-seperator"></div>
             <div class="languages">
               <p>Deutsch - fließend in Wort und Schrift</p>
               <p>Englisch - fließend in Wort und Schrift</p>
