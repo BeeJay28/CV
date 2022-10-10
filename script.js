@@ -21,7 +21,7 @@ const obsCallback = function (entries) {
 
 const obsOptions = {
   root: null,
-  threshold: [0.5, 1],
+  threshold: [0.4, 1],
 };
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
