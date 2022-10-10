@@ -1,6 +1,6 @@
-// const containerEl = document.querySelector(".container");
-const nameBoxEl = document.querySelector(".name-container");
+const containerEl = document.querySelector(".container");
 const navEl = document.querySelector(".nav");
+const nameBoxEl = document.querySelector(".name-box");
 const navLinks = document.querySelector(".nav-links");
 const navItemEls = document.querySelectorAll(".nav-item");
 const sectionEls = document.querySelectorAll("section");
@@ -21,24 +21,27 @@ const obsCallback = function (entries) {
 
 const obsOptions = {
   root: null,
-  threshold: [0.4, 1],
+  threshold: [0.2, 1],
 };
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 sectionEls.forEach(section => observer.observe(section));
 
-// navLinks.addEventListener("mouseover", function (e) {
-//   navItemEls.forEach(navItem => (navItem.style.opacity = 0.5));
-//   e.target.closest(".nav-item").style.opacity = 1;
-// });
-
-// navLinks.addEventListener("mouseleave");
-
-navLinks.addEventListener("click", function (e) {
+const scrollIntoView = function (e) {
   e.preventDefault();
 
   console.log(e.target);
 
   const id = e.target.getAttribute("href");
   document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+};
+
+navLinks.addEventListener("click", scrollIntoView);
+nameBoxEl.addEventListener("click", function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    left: 0,
+    top: 0,
+    behavior: "smooth",
+  });
 });
