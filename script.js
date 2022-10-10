@@ -11,7 +11,6 @@ const obsCallback = function (entries) {
 
   const obsSectionNo = entry.target.id.slice(-1);
   if (!obsSectionNo) return;
-  console.log(obsSectionNo);
 
   const obsNav = document.querySelector(`.nav-item[data-section="${obsSectionNo}"]`);
 
