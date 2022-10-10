@@ -126,6 +126,14 @@ header {
   right: -1rem;
 }
 
+.nav-item-layout {
+  grid-row: 1;
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .nav-item-label-box {
   line-height: 2rem;
   grid-row: 1;
@@ -139,16 +147,8 @@ header {
   /* width: 20px; */
 }
 
-.nav-item-layout {
-  grid-row: 1;
-  grid-column: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .nav-item img {
-  width: 20px;
+  width: 30px;
 }
 
 .nav-item a {
