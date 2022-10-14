@@ -31,7 +31,7 @@ const scrollIntoView = function (e) {
 
   console.log(e.target);
 
-  const id = e.target.getAttribute("href");
+  const id = e.target.closest("a").getAttribute("href");
   document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
 };
 
