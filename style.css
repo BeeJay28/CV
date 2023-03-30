@@ -301,7 +301,7 @@ h4 {
 }
 
 .work-experience .section-content .vertical-seperator {
-  grid-row: span 2;
+  grid-row: span 3;
 }
 
 .education .section-content .vertical-seperator {
@@ -339,9 +339,12 @@ h4 {
 }
 
 .devicon {
-  display: inline;
   width: 6rem;
   margin-left: 2rem;
+}
+
+.devicon-laminas {
+  width: 20rem;
 }
 
 .rating {
