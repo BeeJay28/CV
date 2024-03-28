@@ -294,7 +294,9 @@ h4 {
 
 /* This monstrosity is caused by my attempt to implement a seperator using CSS grid
    instead of Flexbox. Lesson learned, won't do it again. Still stupid that it doesn't
-   work the way I expected it to do. */
+   work the way I expected it to do. 
+   If you add another sub-section, you need to increment the corresponding span.
+*/
 
 .personal-info .section-content .vertical-seperator {
   grid-row: span 5;
@@ -309,7 +311,7 @@ h4 {
 }
 
 .software-skills .section-content .vertical-seperator {
-  grid-row: span 2;
+  grid-row: span 3;
 }
 
 .misc-skills .section-content .vertical-seperator {
@@ -317,6 +319,7 @@ h4 {
 }
 
 .programming-langs,
+.software-skills-frameworks,
 .software-skills-misc,
 .languages {
   display: grid;
@@ -332,11 +335,6 @@ h4 {
   margin-top: 10rem;
 }
 
-.programming-langs .lang-layout,
-.software-skills .lang-layout {
-  line-height: 6rem;
-}
-
 .software-skills p,
 .misc-skills p {
   font-size: 3.2rem;
@@ -348,7 +346,7 @@ h4 {
 }
 
 .devicon-laminas {
-  width: 20rem;
+  width: 18rem;
 }
 
 .rating {
