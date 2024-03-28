@@ -405,6 +405,19 @@ footer {
   vertical-align: middle;
 }
 
+.gitlab-icon {
+  width: 7rem;
+  height: 7rem;
+}
+
+.disabled-anchor {
+  pointer-events: none;
+}
+
+.disabled-anchor > * {
+  opacity: 0.5;
+}
+
 [data-tooltip] {
   position: relative;
   --scale: 0.8;
