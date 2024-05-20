@@ -29,8 +29,6 @@ sectionEls.forEach(section => observer.observe(section));
 const scrollIntoView = function (e) {
   e.preventDefault();
 
-  console.log(e.target);
-
   const id = e.target.closest("a").getAttribute("href");
   document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
 };
