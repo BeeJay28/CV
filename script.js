@@ -18,13 +18,17 @@ const obsCallback = function (entries) {
   obsNav.classList.add("nav-item--selected");
 };
 
-const obsOptions = {
-  root: null,
-  threshold: 0.5,
-};
+const viewportHeight = document.querySelector("html").clientHeight;
+sectionEls.forEach((section) => {
+  const sectionHeight = section.clientHeight;
 
-const observer = new IntersectionObserver(obsCallback, obsOptions);
-sectionEls.forEach(section => observer.observe(section));
+  const obsOptions = {
+    root: null,
+    threshold: Math.min(0.5 * viewportHeight / sectionHeight, 1),
+  };
+
+  (new IntersectionObserver(obsCallback, obsOptions)).observe(section);
+});
 
 const scrollIntoView = function (e) {
   e.preventDefault();
