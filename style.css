@@ -318,6 +318,12 @@ h4 {
   grid-row: span 1;
 }
 
+.work-title {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 3rem;
+}
+
 .programming-langs,
 .software-skills-frameworks,
 .software-skills-misc,
